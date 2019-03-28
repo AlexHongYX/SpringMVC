@@ -1,6 +1,4 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
@@ -9,13 +7,21 @@
   	<servlet-name>SpringMVC</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   	<init-param>
-  		<param-name>DispatcherServlet</param-name>
-  		<param-value>/WEB-INF/dispatcherServlet.xml</param-value>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/dispatcherServlet-servlet.xml</param-value>
   	</init-param>
+
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>SpringMVC</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  <context-param>
+    <param-name>contextConfigLocation </param-name>
+    <param-value>/WEB-INF/classes/dispatcherServlet.xml </param-value>
+</context-param>
+
+  
 </web-app>

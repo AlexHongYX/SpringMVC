@@ -17,7 +17,7 @@ public class UserController {
 	
 	@RequestMapping("/create")
 	public String Success(@ModelAttribute("form")User user,Model model){
-		model.addAttribute(user);
+		model.addAttribute("user",user);
 		return "success";
 	}
 }
