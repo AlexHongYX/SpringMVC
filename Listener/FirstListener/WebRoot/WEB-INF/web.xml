@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FirstListener</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 配置ServletContext监视器 -->
+  <listener>
+  	<listener-class>com.fehead.listener.firstListener</listener-class>
+  </listener>
+  
+  <!-- 配置HTTPSession监视器 -->
+  <listener>
+  	<listener-class>com.fehead.listener.MySessionListener</listener-class>
+  </listener>
+  
+  <!-- 设置一个初始化参数 -->
+  <context-param>
+  	<param-name>initParam</param-name>
+  	<param-value>HelloWorld</param-value>
+  </context-param>
+  
+  <!-- 设置session的超时时间 -->
+  <session-config>
+  	<session-timeout>0</session-timeout>
+  </session-config>
+  
+  <!-- 配置ServletRequest监听器 -->
+  <listener>
+  	<listener-class>com.fehead.listener.MyServletRequest</listener-class>
+  </listener>
+  
+  <!-- 配置ServletContextAttribute监视器 -->
+  <listener>
+  	<listener-class>com.fehead.listener.MyServletContextAttribute</listener-class>
+  </listener>
+  
+  <!-- 配置HTTPSessionAttribute监视器 -->
+  <listener>
+  	<listener-class>com.fehead.listener.MyHttpSessionAttribute</listener-class>
+  </listener>
+  
+  <!-- 配置ServletRequestAttribute监视器 -->
+  <listener>
+  	<listener-class>com.fehead.listener.MyServletRequestAttribute</listener-class>
+  </listener>
+</web-app>
