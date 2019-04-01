@@ -1,0 +1,5 @@
+com\fehead\mvcdemo\controller\CourseController.class
+com\fehead\mvcdemo\model\Chapter.class
+com\fehead\mvcdemo\service\impl\CourseServiceImpl.class
+com\fehead\mvcdemo\model\Course.class
+com\fehead\mvcdemo\service\CourseService.class

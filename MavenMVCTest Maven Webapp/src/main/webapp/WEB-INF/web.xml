@@ -1,0 +1,28 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app id="WebApp_1554125828844">
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <!-- 定义servlet -->
+  <servlet>
+  	<servlet-name>spring-mvc</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<init-param>
+  		<param-name>dispatcherServlet</param-name>
+  		<param-value>/WEB-INF/spring-mvc-servlet</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>spring-mvc</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 定义初始化参数 -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/dispatcherServlet.xml</param-value>
+  </context-param>
+</web-app>
